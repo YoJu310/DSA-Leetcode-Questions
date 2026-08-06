@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // sorting + 2-pointer approach (optimal)
     vector<vector<int>> threeSum(vector<int>& nums) {
 
         vector<vector<int>> ans;
@@ -20,19 +21,22 @@ public:
                 else if (sum > 0)
                     right--;
                 else{
-                    vector<int>temp = {nums[i] , nums[left], nums[right]};
-                    // no need to sort as arr is already sorted in start
-                    ans.push_back(temp);
-                    left++;
-                    right--;
-                    
+                    ans.push_back({nums[i], nums[left], nums[right]});
+
                     // skip duplicate left
-                    while (left < right && nums[left] == nums[left-1])
+                    while(left < right &&
+                          nums[left] == nums[left + 1]) {
                         left++;
+                    }
 
                     // skip duplicate right
-                    while (left < right && nums[right] == nums[right+1])
+                    while(left < right &&
+                          nums[right] == nums[right - 1]) {
                         right--;
+                    }
+
+                    left++;
+                    right--;
                 }
             }
         }
