@@ -4,11 +4,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0018-4sum) |
 ## Two Pointers
 |  |
 | ------- |
+| [0011-container-with-most-water](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0018-4sum) |
 ## Sorting
@@ -16,4 +18,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0015-3sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0018-4sum) |
+## Greedy
+|  |
+| ------- |
+| [0011-container-with-most-water](https://github.com/YoJu310/DSA-Leetcode-Questions/tree/master/0011-container-with-most-water) |
 <!---LeetCode Topics End-->
