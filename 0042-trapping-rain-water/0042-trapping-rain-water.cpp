@@ -1,33 +1,37 @@
 class Solution {
 public:
     int trap(vector<int>& height) {
+
         int n = height.size();
         int totalWater = 0;
 
-        // assigning size is necessary , if not then leftMax[0] will give runtime error
-        vector <int> leftMax(n);
-        vector <int> rightMax(n);
+        int left = 0;
+        int right = n-1;
 
-        leftMax[0] = height[0];
-        rightMax[n-1] = height[n-1];
-        
-        // fill leftMax
-        for (int i = 1; i<n; i++) {
-            leftMax[i] = max(leftMax[i-1], height[i]);
+        int leftMax = 0;
+        int rightMax = 0;
+
+        while (left <= right){
+            if (height[left] <= height[right]){
+                if (height[left] >= leftMax)
+                    leftMax = height[left];
+                
+                else
+                    totalWater += leftMax - height[left];
+                
+                left++ ;
+            }
+            else {
+                if (height[right] >= rightMax)
+                    rightMax = height[right];
+                
+                else
+                    totalWater += rightMax - height[right];
+
+                right-- ;
+            }
         }
-        
-        // fill rightMax
-        for (int i = n-2; i>=0; i--){
-            rightMax[i] = max(rightMax[i+1], height[i]);
-        }
-
-        for (int i=0 ; i<n ; i++){
-            totalWater += min( leftMax[i], rightMax[i]) - height[i];
-        }
-
-        return totalWater;
-
-
+        return totalWater ;
         
     }
 };
